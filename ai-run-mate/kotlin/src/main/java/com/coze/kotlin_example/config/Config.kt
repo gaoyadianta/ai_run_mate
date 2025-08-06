@@ -1,7 +1,7 @@
 package com.coze.kotlin_example.config
 
 import android.content.Context
-import com.coze.kotlin_example.R
+import com.runmate.ai.R
 
 class Config private constructor() {
     var cozeAccessToken: String = ""

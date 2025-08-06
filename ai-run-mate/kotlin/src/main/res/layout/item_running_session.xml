@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 跑步记录列表项布局 -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- 跑步图标 -->
+        <ImageView
+            android:id="@+id/running_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_running"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 日期时间 -->
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/running_icon"
+            app:layout_constraintTop_toTopOf="@id/running_icon"
+            tools:text="2024-01-15 18:30" />
+
+        <!-- 距离 -->
+        <TextView
+            android:id="@+id/distance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/date_text"
+            app:layout_constraintTop_toBottomOf="@id/date_text"
+            tools:text="5.2 km" />
+
+        <!-- 用时 -->
+        <TextView
+            android:id="@+id/duration_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/distance_text"
+            app:layout_constraintStart_toEndOf="@id/distance_text"
+            tools:text="25:30" />
+
+        <!-- 配速 -->
+        <TextView
+            android:id="@+id/pace_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/distance_text"
+            app:layout_constraintStart_toEndOf="@id/duration_text"
+            tools:text="4'55&quot;/km" />
+
+        <!-- 步数 -->
+        <TextView
+            android:id="@+id/steps_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/date_text"
+            app:layout_constraintTop_toBottomOf="@id/distance_text"
+            tools:text="7,250 步" />
+
+        <!-- 卡路里 -->
+        <TextView
+            android:id="@+id/calories_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/steps_text"
+            app:layout_constraintStart_toEndOf="@id/steps_text"
+            tools:text="320 kcal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -3,13 +3,23 @@ agp = "8.7.3"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-appcompat = "1.7.0"
+appcompat = "1.6.1"
 material = "1.12.0"
 volcenginertc = "3.58.1.19400"
 cozeApi = "0.2.1"
 lombok = "1.18.30"
-kotlin = "1.9.24"
+kotlin = "1.9.22"
 coreKtx = "1.13.0"
+# 跑步相关依赖版本
+lifecycle = "2.7.0"
+room = "2.6.1"
+playServicesLocation = "21.0.1"
+playServicesMaps = "18.2.0"
+compose = "1.5.10"
+composeBom = "2024.02.00"
+composeActivity = "1.8.2"
+workManager = "2.9.0"
+datastore = "1.0.0"
 
 [libraries]
 core = { module = "androidx.core:core", version.ref = "coreKtx" }
@@ -22,6 +32,35 @@ volcenginertc = { module = "com.volcengine:VolcEngineRTC", version.ref = "volcen
 coze-api = { module = "com.coze:coze-api", version.ref = "cozeApi" }
 lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+# 跑步相关依赖
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+
+# Room数据库
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+
+# Google Play Services
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+
+# Jetpack Compose
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "composeActivity" }
+lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+
+# WorkManager
+work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workManager" }
+
+# DataStore
+datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
